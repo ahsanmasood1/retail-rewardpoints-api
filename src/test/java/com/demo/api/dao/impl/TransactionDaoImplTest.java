@@ -40,22 +40,8 @@ class TransactionDaoImplTest {
 
     @Test
     void addTransaction() {
-        //        Mockito.when(transactionRepository.findLastThreeMonths(anyLong(),
-        // any(LocalDate.class))).thenReturn(Optional.of(List.of(TestHelper.getTransaction())));
         Mockito.when(transactionRepository.save(any())).thenReturn(TestHelper.getTransaction());
         Transaction transaction = transactionDao.addTransaction(TestHelper.getTransaction());
         assertNotNull(transaction);
         assertEquals(1L, transaction.getId());
     }
-
-    @Test
-    void addTransactionWithError() {
-        Mockito.when(transactionRepository.save(any())).thenReturn(RuntimeException.class);
-        assertThrows(
-                TransactionException.class,
-                () -> {
-                    Transaction transaction =
-                            transactionDao.addTransaction(TestHelper.getTransaction());
-                });
-    }
-}

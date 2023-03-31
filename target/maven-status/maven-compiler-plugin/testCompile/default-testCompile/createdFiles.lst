@@ -1,8 +1,0 @@
-com/demo/api/helper/TestHelper.class
-com/demo/api/dao/impl/TransactionDaoImplTest.class
-com/demo/api/controller/RewardsControllerTest.class
-com/demo/api/dao/impl/RewardsDaoImplTest.class
-com/demo/api/dao/impl/CustomerDaoImplTest.class
-com/demo/api/service/impl/RewardsServiceImplTest.class
-com/demo/api/service/impl/TransactionServiceImplTest.class
-com/demo/api/controller/TransactionControllerTest.class
